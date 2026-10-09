@@ -8,7 +8,7 @@ Repository: <https://github.com/OpenXiangShan/XSEC.git>
 
 ## Overview
 
-**XSEC** (pronounced **"X-Sec"** /eks-sek/) is the security ecosystem chain for the XiangShan processor. It spans the full stack from processor microarchitecture, on-chip interconnect, memory safety, and uncore security, to firmware, operating systems, virtualization, toolchains, and verification.
+**XSEC** (pronounced **"X-Sec"** /eks-sek/) is the security ecosystem chain for the XiangShan processor. It spans the full stack from processor microarchitecture, on-chip interconnect, uncore security, to firmware, operating systems, virtualization, toolchains, and verification.
 
 - **X** = XiangShan
 - **S** = Security
@@ -24,8 +24,7 @@ XSEC covers the following areas:
 | Area | Contents |
 |------|----------|
 | Processor Cores | XiangShan, NEMU, GEM5, Spike, QEMU |
-| Memory Safety | Memory Encryption, IOPMP, IOMPT |
-| Uncore Security | AIA, IOMMU, Debug, SCP |
+| Uncore Security | AIA, IOMMU, Debug, SCP, Memory Encryption, IOPMP, IOMPT |
 | On-Chip Interconnect | NoC |
 | Toolchains | GCC, LLVM |
 | System Software | Linux, OpenSBI, KVM Tools |
@@ -45,14 +44,6 @@ XSEC covers the following areas:
 | **Spike** | Official RISC-V reference simulator for semantic comparison |
 | **QEMU** | System-level emulation for running OpenSBI / Linux |
 
-### Memory & I/O Security
-
-| Module | Description |
-|--------|-------------|
-| **Memory Encryption** | Memory encryption for data confidentiality |
-| **IOPMP** | I/O Physical Memory Protection against illegal DMA |
-| **IOMPT** | I/O Memory Protection Table for fine-grained device memory access control |
-
 ### Uncore Security
 
 | Module | Description |
@@ -61,6 +52,9 @@ XSEC covers the following areas:
 | **IOMMU** | I/O Memory Management Unit for device address translation and isolation |
 | **Debug** | Secure debug architecture and access control |
 | **SCP** | System Control Processor for secure boot and power management |
+| **Memory Encryption** | Memory encryption for data confidentiality |
+| **IOPMP** | I/O Physical Memory Protection against illegal DMA |
+| **IOMPT** | I/O Memory Protection Table for fine-grained device memory access control |
 
 ### On-Chip Interconnect
 
@@ -106,14 +100,14 @@ XSEC/
 ├── gem5/                 # GEM5 simulation
 ├── spike/                # Spike reference model
 ├── qemu/                 # QEMU system emulation
-├── memory-encryption/    # Memory encryption
-├── iopmp/                # IOPMP
-├── iompt/                # IOMPT
 ├── uncore/               # Uncore security
 │   ├── aia/              # AIA interrupt architecture
 │   ├── iommu/            # IOMMU
 │   ├── debug/            # Secure debug
-│   └── scp/              # SCP
+│   ├── scp/              # SCP
+│   ├── memory-encryption/# Memory encryption
+│   ├── iopmp/            # IOPMP
+│   └── iompt/            # IOMPT
 ├── noc/                  # NoC
 ├── gcc/                  # GCC toolchain
 ├── llvm/                 # LLVM toolchain
@@ -136,7 +130,7 @@ XSEC/
 ## Goals
 
 - Build the security ecosystem chain for the XiangShan processor from hardware to software
-- Cover memory, uncore, interconnect, firmware, OS, virtualization, and toolchains
+- Cover uncore, interconnect, firmware, OS, virtualization, and toolchains
 - Provide comprehensive verification: UVM, UCA, Formal, Fuzz, PoC, TPG, System Verification
 - Form a reproducible, extensible, and verifiable security ecosystem
 
