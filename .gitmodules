@@ -6,3 +6,7 @@
 	path = NEMU
 	url = git@github.com:OpenXiangShan/NEMU.git
 	branch = SE-kunminghu-v3
+[submodule "GEM5"]
+	path = GEM5
+	url = git@github.com:OpenXiangShan/GEM5.git
+	branch = SE-kunminghu-v3
