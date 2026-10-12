@@ -1,11 +1,11 @@
 [submodule "XiangShan"]
 	path = XiangShan
 	url = git@github.com:OpenXiangShan/XiangShan.git
-	branch = SE-kunminghu-v3
+	branch = SE-kunminghu-v2
 [submodule "NEMU"]
 	path = NEMU
 	url = git@github.com:OpenXiangShan/NEMU.git
-	branch = SE-kunminghu-v3
+	branch = SE-kunminghu-v2
 [submodule "GEM5"]
 	path = GEM5
 	url = git@github.com:OpenXiangShan/GEM5.git
